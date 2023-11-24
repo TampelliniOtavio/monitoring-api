@@ -23,6 +23,10 @@ API para monitoramento de Servidor
 
 `source venv/bin/activate`
 
+#### Windows (PowerShell)
+
+`.\venv\Scripts\activate.ps1`
+
 ### Instalar dependências
 
 `pip install -r requirements.txt`
