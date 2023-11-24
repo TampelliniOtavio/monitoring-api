@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-import subprocess
+import os
 
 router = APIRouter(
     prefix="/minecraft",
@@ -9,7 +9,6 @@ router = APIRouter(
 
 @router.get("/server/list")
 async def list_all_servers():
-    cmd = ["msm", "server list"]
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    stdout = result.stdout.decode('utf-8')
-    return stdout
+    cmd = "/usr/local/bin/msm server list"
+    result = os.popen(cmd).read().split("\n")
+    return result
