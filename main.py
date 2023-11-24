@@ -3,6 +3,7 @@ from app.routers import minecraft, healthcheck
 
 app = FastAPI()
 
+app.include_router(minecraft.router)
 app.include_router(healthcheck.router)
 
 def main():
