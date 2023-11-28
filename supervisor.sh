@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -z "${MONITORING_API_PATH}" ]]; then
+if [[ ! -v MONITORING_API_PATH ]]; then
     echo "Caminho da API não configurado, por favor executar configure-supervisor.sh"
     exit
 fi
