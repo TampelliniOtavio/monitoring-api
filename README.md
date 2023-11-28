@@ -50,7 +50,7 @@ API para monitoramento de Servidor
 
 Configurar Automaticamente o supervisor
 
-`configure-supervisor.sh`
+` . configure-supervisor.sh`
 
 Iniciar instância do supervisor
 
