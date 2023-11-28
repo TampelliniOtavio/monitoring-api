@@ -1,14 +1,14 @@
-#!bin/bash
+#!/bin/bash
 
-cd /home/otavio/monitoring-api
+if [[ -z "${MONITORING_API_PATH}" ]]; then
+    echo "Caminho da API não configurado, por favor executar configure-supervisor.sh"
+    exit
+fi
 
-git restore --staged .
-git restore .
-git switch main
-git pull
+cd $MONITORING_API_PATH
 
-if ! [ -f /home/otavio/monitoring-api/venv ]; then
-    python3 -m virtualenv venv
+if ! [ -f venv ]; then
+    python3 -m venv venv
     echo "*" > venv/.gitignore
 fi
 
