@@ -15,7 +15,7 @@ async def list_all_servers():
 
 @router.get("/{server}/start")
 async def start_server(server: str):
-    return minecraft.start_server()
+    return minecraft.start_server(server)
 
 @router.get("/{server}/stop")
 async def stop_server(server: str, force: bool | None = None):
