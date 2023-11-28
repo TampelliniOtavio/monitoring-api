@@ -2,10 +2,19 @@
 
 API para monitoramento de Servidor
 
+## Atenção
+
+*TESTADO APENAS EM DEBIAN*
+
 ## Requisitos
 
+* [Minecraft Management Server](https://msmhq.com/docs/installation.html)
 * [Python](https://www.python.org/downloads/)
 * [pip](https://pip.pypa.io/en/stable/installation/)
+
+### Opcional
+
+* [Supervisor](https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps)
 
 ## Instalação
 
@@ -23,10 +32,6 @@ API para monitoramento de Servidor
 
 `source venv/bin/activate`
 
-#### Windows (PowerShell)
-
-`.\venv\Scripts\activate.ps1`
-
 ### Instalar dependências
 
 `pip install -r requirements.txt`
@@ -38,3 +43,15 @@ API para monitoramento de Servidor
 ## Documentação
 
 [localhost](http://localhost:8000/docs)
+
+## Configurações Adicionais
+
+### Supervisor
+
+Configurar Automaticamente o supervisor
+
+`configure-supervisor.sh`
+
+Iniciar instância do supervisor
+
+`sudo supervisorctl start monitoring-api`
