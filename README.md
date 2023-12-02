@@ -11,6 +11,7 @@ API para monitoramento de Servidor
 * [Minecraft Management Server](https://msmhq.com/docs/installation.html)
 * [Python](https://www.python.org/downloads/)
 * [pip](https://pip.pypa.io/en/stable/installation/)
+* [Java](./guides/MINECRAFT.md#instalar-o-java)
 
 ### Opcional
 
